@@ -5,7 +5,7 @@
 - [GLUE基准代码 (英文)](https://github.com/nishiwen1214/GLUE-bert4keras)
 - [SuperGLUE基准代码 (英文)](https://github.com/nishiwen1214/SuperGLUE-bert4keras)
 
-### ⭐️欢迎star和提问～
+### 欢迎star⭐️和提问❓～
 
 ### 实验结果：
 
