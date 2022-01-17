@@ -1,8 +1,9 @@
 # 基于bert4keras的SuperGLUE基准代码
 
-- [CLUE基准代码](https://github.com/bojone/CLUE-bert4keras)
-- [GLUE基准代码](https://github.com/nishiwen1214/GLUE-bert4keras)
-- [SuperGLUE基准代码](https://github.com/nishiwen1214/GLUE-bert4keras)
+## 集齐CLUE，GLUE，SuperGLUE 三大自然语言理解榜单的基准代码
+- [CLUE基准代码 (中文)](https://github.com/bojone/CLUE-bert4keras)
+- [GLUE基准代码 (英文)](https://github.com/nishiwen1214/GLUE-bert4keras)
+- [SuperGLUE基准代码 (英文)](https://github.com/nishiwen1214/SuperGLUE-bert4keras)
 
 [SuperGLUE benchmark](https://gluebenchmark.com/)
 
