@@ -1,8 +1,7 @@
 #! -*- coding:utf-8 -*-
-# CLUE评测
+# SuperGLUE评测
 # ReCoRD阅读理解
 # 思路：基于滑动窗口和GlobalPointer
-# roberta-large-wwm val-acc: 
 
 
 import json
@@ -194,7 +193,7 @@ model.summary()
 
 model.compile(
     loss=globalpointer_crossentropy,
-    optimizer=optimizer2,
+    optimizer=optimizer4,
     metrics=[globalpointer_accuracy]
 )
 
@@ -290,7 +289,6 @@ def test_predict(in_file, out_file):
                 l = json.dumps({'idx': inx, 'label':str(r)})
                 fw.write(l + '\n')
     fw.close()
-        # json.dump(results, f, ensure_ascii=False, indent=4)
 
 
 if __name__ == '__main__':
