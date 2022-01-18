@@ -14,7 +14,7 @@ from tqdm import tqdm
 labels = [False, True]
 num_classes = len(labels)
 maxlen = 128
-batch_size = 16
+batch_size = 32
 epochs = 10
 
 
