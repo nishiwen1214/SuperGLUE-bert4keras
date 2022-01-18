@@ -10,6 +10,8 @@
 ### 实验结果：
 
 - test set:
+<img width="931" alt="image" src="https://user-images.githubusercontent.com/56249874/149891667-24e1382e-7332-4604-89ea-c54ee40dc5ca.png">
+
 
 
 ### 使用
