@@ -2,7 +2,6 @@
 # SuperGLUE评测
 # BoolQ文本相似度
 # 思路：段落和问题拼接后取[CLS]然后接Dense+Softmax分类
-# bert-base  val-acc: 76.12
 
 import json
 import numpy as np
@@ -16,7 +15,7 @@ from tqdm import tqdm
 labels = [False, True]
 num_classes = 2
 maxlen = 128
-batch_size = 16
+batch_size = 32
 epochs = 10
 
 
