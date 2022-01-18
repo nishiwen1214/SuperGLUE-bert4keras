@@ -2,7 +2,6 @@
 # SuperGLUE评测
 # CB文本相似度
 # 思路：premise和hypothesis拼接后取[CLS]然后接Dense+Softmax分类
-# bert-base  val-F1: 78.57
 
 import json
 import numpy as np
@@ -17,7 +16,7 @@ from sklearn.metrics import f1_score, accuracy_score
 labels = ['entailment', 'neutral', 'contradiction']
 num_classes = len(labels)
 maxlen = 128
-batch_size = 16
+batch_size = 32
 epochs = 10
 
 
@@ -133,13 +132,13 @@ def test_predict(in_file, out_file):
 
 
 if __name__ == '__main__':
-    model.load_weights('weights/CB.weights')
+    
     evaluator = Evaluator()
 
     model.fit_generator(
         train_generator.forfit(),
         steps_per_epoch=len(train_generator),
-        epochs=1,
+        epochs=epochs,
         callbacks=[evaluator]
     )
 
