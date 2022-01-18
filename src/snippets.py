@@ -14,7 +14,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 # 通用参数
 data_path = '../Datasets/SuperGLUE/'
-learning_rate = 1e-5
+learning_rate = 4e-5
 pooling = 'first'
 
 # 权重目录
@@ -27,14 +27,9 @@ if not os.path.exists('results'):
 
 # 预训练模型路径
 # bert-base-uncased
-# config_path = '../Pre-trained_models/uncased_L-12_H-768_A-12/bert_config.json'
-# checkpoint_path = '../Pre-trained_models/uncased_L-12_H-768_A-12/bert_model.ckpt'
-# dict_path = '../Pre-trained_models/uncased_L-12_H-768_A-12/vocab.txt'
-
-# bert-large-cased
-config_path = '../Pre-trained_models/cased_L-24_H-1024_A-16/bert_config.json'
-checkpoint_path = '../Pre-trained_models/cased_L-24_H-1024_A-16/bert_model.ckpt'
-dict_path = '../Pre-trained_models/cased_L-24_H-1024_A-16/vocab.txt'
+config_path = '../Pre-trained_models/uncased_L-12_H-768_A-12/bert_config.json'
+checkpoint_path = '../Pre-trained_models/uncased_L-12_H-768_A-12/bert_model.ckpt'
+dict_path = '../Pre-trained_models/uncased_L-12_H-768_A-12/vocab.txt'
 
 
 # 建立分词器
