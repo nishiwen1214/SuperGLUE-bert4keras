@@ -23,4 +23,4 @@
 - 硬件：结果是用 RTX 3090 (24G)，注意3090显卡不支持Google的tf 1.x系列，需使用Nvidia的tf.15。安装教程可参考：https://www.bilibili.com/read/cv9162965/
 
 ### 更新
-- 2022-1-18 上传test set结果，只剩ReCoRD的结果还没跑出来
+- 2022-1-18 上传test set结果，只剩ReCoRD的结果还没跑出来（跑太慢了。。。）
