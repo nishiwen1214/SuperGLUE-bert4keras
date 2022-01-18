@@ -2,7 +2,6 @@
 # SuperGLUE评测
 # WSC代词消歧
 # 思路：给span1、span2加上特殊标记，然后当成文本分类
-# bert-base acc:63.46
 
 import json
 import numpy as np
