@@ -2,7 +2,6 @@
 # SuperGLUE评测
 # MultiRC多项选择阅读理解任务
 # 思路：段落, 问题，各个答案一起拼接后取[CLS]然后接Dense+Softmax分类
-# bert-base  val-f1: 
 
 import json
 from os import P_PGID
@@ -18,7 +17,7 @@ from sklearn.metrics import f1_score
 labels = [False, True]
 num_classes = len(labels)
 maxlen = 128
-batch_size = 16
+batch_size = 32
 epochs = 15
 
 
