@@ -2,7 +2,6 @@
 # SuperGLUE评测
 # COPA多项选择阅读理解
 # 思路：每个选项分别与前提和问题拼接后打分排序
-# bert-base val-acc: 66.0
 
 import json
 import numpy as np
@@ -16,7 +15,7 @@ from tqdm import tqdm
 # 基本参数
 num_classes = 2
 maxlen = 128
-batch_size = 16
+batch_size = 32
 epochs = 10
 
 
@@ -153,7 +152,6 @@ def test_predict(in_file, out_file):
 
 if __name__ == '__main__':
 
-    model.load_weights('weights/COPA.weights')
     evaluator = Evaluator()
 
     model.fit_generator(
