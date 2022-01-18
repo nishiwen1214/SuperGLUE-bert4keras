@@ -2,7 +2,6 @@
 # SuperGLUE评测
 # RTE文本相似度
 # 思路：premise和hypothesis拼接后取[CLS]然后接Dense+Softmax分类
-# bert-base  val-acc: 64.26
 
 import json
 import numpy as np
@@ -16,7 +15,7 @@ from tqdm import tqdm
 labels = ['entailment', 'not_entailment']
 num_classes = len(labels)
 maxlen = 128
-batch_size = 16
+batch_size = 32
 epochs = 15
 
 
