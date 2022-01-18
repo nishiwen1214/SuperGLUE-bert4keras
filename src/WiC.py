@@ -2,7 +2,6 @@
 # SuperGLUE评测
 # WiC文本相似度
 # 思路：word, 句子1和句子2一起拼接后取[CLS]然后接Dense+Softmax分类
-# bert-base  val-acc: 70.06
 
 import json
 import numpy as np
@@ -17,7 +16,7 @@ from tqdm import tqdm
 labels = [False, True]
 num_classes = len(labels)
 maxlen = 128
-batch_size = 16
+batch_size = 32
 epochs = 12
 
 
