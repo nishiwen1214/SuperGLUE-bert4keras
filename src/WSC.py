@@ -9,6 +9,7 @@ from snippets import *
 from bert4keras.snippets import sequence_padding, DataGenerator
 from bert4keras.snippets import open
 from tqdm import tqdm
+import re
 
 # 基本参数
 labels = [False, True]
@@ -27,21 +28,27 @@ def load_data(filename):
         for i, l in enumerate(f):
             l = json.loads(l)
             text, label = l['text'], labels.index(l.get('label', False))
+            text_sp = re.split(' ', text)  
             s1 = l['target']['span1_index']
-            e1 = s1 + len(l['target']['span1_text'])
+            e1 = s1 + len(re.split(' ', l['target']['span1_text'])) 
             s2 = l['target']['span2_index']
-            e2 = s2 + len(l['target']['span2_text'])
+            e2 = s2 + len(re.split(' ',l['target']['span2_text']))
+            text_new = ''
             if s1 < s2:
-                text = (
-                    text[:s1] + '|' + text[s1:e1] + '|' + text[e1:s2] + '[' +
-                    text[s2:e2] + ']' + text[e2:]
-                )
+                text_sp.insert(s1,'|')
+                text_sp.insert(e1+1,'|' )
+                text_sp.insert(s2+2,'[')
+                text_sp.insert(e2+3,']' )
+                for w in text_sp:
+                    text_new += w + ' '
             else:
-                text = (
-                    text[:s2] + '[' + text[s2:e2] + ']' + text[e2:s1] + '|' +
-                    text[s1:e1] + '|' + text[e1:]
-                )
-            D.append((text, label))
+                text_sp.insert(s2,'|')
+                text_sp.insert(e2+1,'|' )
+                text_sp.insert(s1+2,'[')
+                text_sp.insert(e1+3,']' )
+                for w in text_sp:
+                    text_new += w + ' '
+            D.append((text_new, label))
     return D
 
 
